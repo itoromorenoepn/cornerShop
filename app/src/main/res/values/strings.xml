@@ -16,4 +16,5 @@
     <string name="fecha_exp">Fecha expiracion</string>
     <string name="codigo_seg">Codigo Seguridad</string>
     <string name="btn_Pagar">Pagar</string>
+    <string name="title_activity_maps3">Map</string>
 </resources>
