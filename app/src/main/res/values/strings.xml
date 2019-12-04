@@ -17,4 +17,8 @@
     <string name="codigo_seg">Codigo Seguridad</string>
     <string name="btn_Pagar">Pagar</string>
     <string name="title_activity_maps3">Map</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtPassword">Password</string>
+    <string name="txtName">Nombre</string>
+    <string name="botonGuardar">Guardar</string>
 </resources>

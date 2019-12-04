@@ -23,18 +23,21 @@
         <activity
                 android:name=".catalogue"
                 android:label="@string/title_activity_catalogue"
-                android:theme="@style/AppTheme.NoActionBar">
+                android:theme="@style/AppTheme.NoActionBar"/>
 
-        <meta-data
-                android:name="com.google.android.geo.API_KEY"
-                android:value="@string/google_maps_key" />
+
 
         <activity
                 android:name=".MapsActivity"
-                android:label="@string/title_activity_maps3"></activity>
+                android:label="@string/title_activity_maps3">
+
+        </activity>
         <activity android:name=".registrar">
 
         </activity>
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,7 +45,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
