@@ -13,7 +13,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 
-class MapsActivity : FragmentActivity(), OnMapReadyCallback, GoogleMap.OnMapClickListener,
+class MapsActivity2 : FragmentActivity(), OnMapReadyCallback, GoogleMap.OnMapClickListener,
     GoogleMap.OnMarkerDragListener {
 
     private var mMap: GoogleMap? = null
@@ -52,7 +52,7 @@ class MapsActivity : FragmentActivity(), OnMapReadyCallback, GoogleMap.OnMapClic
         mMap!!.addMarker(MarkerOptions().position(sydney).title("MiniMarket Floresta"))
         mMap!!.moveCamera(CameraUpdateFactory.newLatLng(sydney))
 
-       // mMap!!.mapType = GoogleMap.MAP_TYPE_SATELLITE
+        // mMap!!.mapType = GoogleMap.MAP_TYPE_SATELLITE
     }
 
 
