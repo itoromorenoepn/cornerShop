@@ -1,9 +1,4 @@
 <resources>
     <string name="app_name">Corner Shop</string>
-    <string name="title_activity_login">Sign in</string>
-    <string name="txtEmail">Email</string>
-    <string name="txtPassword">Password</string>
-    <string name="botonGuardar">Guardar</string>
-    <string name="txtName">Nombre</string>
-
+    <string name="title_activity_maps1">Map</string>
 </resources>
