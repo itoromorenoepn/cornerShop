@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Corner Shop</string>
+    <string name="title_activity_catalogue">catalogue</string>
+    <string-array name="Categorias">
+        <item>Bebida</item>
+        <item>Snacks</item>
+        <item>Licor</item>
+        <item>Legumbres</item>
+    </string-array>
+    <string name="dialog_agregar_titulo">Coca cola 350ml</string>
+    <string name="btn_Agregar">Agregar</string>
+    <string name="gtn_Cancelar">Cancelar</string>
+    <string name="title_activity_car_shop">car_shop</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="num_tarjeta">Numero de tarjeta</string>
+    <string name="fecha_exp">Fecha expiracion</string>
+    <string name="codigo_seg">Codigo Seguridad</string>
+    <string name="btn_Pagar">Pagar</string>
 </resources>

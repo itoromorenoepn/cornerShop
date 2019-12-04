@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="is.epn.cornershop">
+        package="is.epn.cornershop">
 
     <application
             android:allowBackup="true"
@@ -9,13 +9,27 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        <activity android:name=".form_pay"
+                android:parentActivityName=".metod_pay"></activity>
+        <activity android:name=".metod_pay"
+                android:parentActivityName=".car_shop"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+        <activity
+                android:name=".car_shop"
+                android:label="@string/title_activity_car_shop"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:parentActivityName=".catalogue"/>
+        <activity
+                android:name=".catalogue"
+                android:label="@string/title_activity_catalogue"
+                android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
