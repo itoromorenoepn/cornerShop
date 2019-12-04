@@ -1,16 +1,19 @@
 package `is`.epn.cornershop
 
-import android.support.v4.app.FragmentActivity
 import android.os.Bundle
+import android.support.v4.app.FragmentActivity
+
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 
-class MapsActivity : FragmentActivity(), OnMapReadyCallback, GoogleMap.OnMapClickListener {
+class MapsActivity : FragmentActivity(), OnMapReadyCallback, GoogleMap.OnMapClickListener,
+    GoogleMap.OnMarkerDragListener {
 
     private var mMap: GoogleMap? = null
 
@@ -36,18 +39,38 @@ class MapsActivity : FragmentActivity(), OnMapReadyCallback, GoogleMap.OnMapClic
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        //metodo hacer clic
+        //clic sobre el mapa
         mMap!!.setOnMapClickListener(this)
 
+        //evento
+        mMap!!.setOnMarkerDragListener(this)
+
+
         // Add a marker in Sydney and move the camera
-        val Floresta = LatLng(-0.212698, -78.487963)
-        mMap!!.addMarker(MarkerOptions().position(Floresta).title("MiniMarket Floresta"))
-        mMap!!.moveCamera(CameraUpdateFactory.newLatLng(Floresta))
+        val sydney = LatLng(-0.212698, -78.487963)
+        mMap!!.addMarker(MarkerOptions().position(sydney).title("MiniMarket Floresta"))
+        mMap!!.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+
+        mMap!!.mapType = GoogleMap.MAP_TYPE_SATELLITE
     }
+
 
     override fun onMapClick(latLng: LatLng) {
         mMap!!.addMarker(
-            MarkerOptions().position(latLng).title("Nuevo Marcador")
+            MarkerOptions().position(latLng).title("Nuevo Marcador").draggable(true)
         )
     }
+
+    override fun onMarkerDragStart(marker: Marker) {
+
+    }
+
+    override fun onMarkerDrag(marker: Marker) {
+
+    }
+
+    override fun onMarkerDragEnd(marker: Marker) {
+        // establecer aqui el intent +++++++++++++++++++++++++++++++++++++++++++++++++++
+    }
 }
+
